@@ -52,18 +52,18 @@ function searchBox(){
 // Seller Cards
 
 const cards = [
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender A24', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender B29', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender C32', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender D18', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender E04', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender A19', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender B44', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender C57', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender D31', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender E42', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender A10', para:'Premiun type c with Charger'},
-    {img:'./images/Artboard1_7_5c77acc1-b603-4083-80f7-95f269dc5926.webp', heading:'Blender E08', para:'Premiun type c with Charger'}
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A24', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B29', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C32', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D18', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E04', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A19', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B44', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C57', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D31', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E42', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A10', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E08', para:'Premiun type c with Charger'}
 ]
 
 document.getElementById('seller-container').innerHTML = cards.map(ing => `

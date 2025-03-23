@@ -555,7 +555,7 @@ body {
 .seller{
     width: 100%;
     height: auto;
-    background-color: #ffe8aa;
+    /* background-color: #ffe8aa; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -610,17 +610,21 @@ body {
 
 .child button{
     padding: 10px 20px;
-    background-color: #ffd35b;
+    /* background-color: #ffd35b; */
+    background-color: #ff3c78;
     color: white;
     font-size: 16px;
     border-radius: 15px;
     border: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .child button:hover{
     background: transparent;
-    color: #ffd35b;
-    border: 2px solid #ffd35b;
+    /* color: #ffd35b; */
+    /* border: 2px solid #ffd35b; */
+    color: #ff3c78;
+    border: 2px solid #ff3c78;
 }
 
 @media (max-width: 768px){
@@ -837,7 +841,7 @@ body {
     text-decoration: none;
     text-align: center;
     padding: 0 60px;
-    color: rgba(0, 0, 0, 0.89);
+    color: #ff3c78;
     position: relative;
     font-weight: 600;
 }
@@ -862,6 +866,9 @@ body {
 }
 
 @media (max-width: 500px){
+    .news-heading{
+        margin-top: 100px;
+    }
     .l-news {
         display: flex;
         flex-direction: column;
