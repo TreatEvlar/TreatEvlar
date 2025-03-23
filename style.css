@@ -639,21 +639,27 @@ body {
     }
 
     .seller .seller-container .child{
-        width: 150px;
+        width: 155px;
         height: 200px;
         box-shadow: 0 0 10px black; 
         background-color: white;
     }
 
     .seller .seller-container .child img{
-        width: 150px;
-        height: 110px;
+        width: 155px;
+        height: 130px;
         box-shadow: none;
     }
 
+    .child h2{
+        font-size: 20px;
+    }
+
     .child p{
+        font-size: 14px;
         margin-top: 0;
         text-align: center;
+        line-height: 15px;
     }
 
 
