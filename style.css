@@ -6,6 +6,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
 }
@@ -205,7 +209,7 @@ body {
 
     .navbar-container ul{
         width: 80%;    
-        height: 100vh;
+        height: 91vh;
         position: absolute;
         top: 0px;
         right: 890px;
@@ -271,13 +275,13 @@ body {
 
     .navbar .navbar-container .search-box .fa-magnifying-glass{
         position: fixed;
-        padding: 13px 14px;
+        padding: 19px 14px;
     }
     
     .navbar .navbar-container .search-box .fa-xmark{
         position: fixed;
         right: 0;
-        margin: 13px 14px;
+        margin: 19px 14px;
         z-index: 100;
         font-size: 20px;
         cursor: pointer;
@@ -299,7 +303,6 @@ body {
     width: 50%;
     height: 100vh;
     background-color: #ffe8aa;
-    /* background-color: #ffeaa7; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -555,7 +558,7 @@ body {
 .seller{
     width: 100%;
     height: auto;
-    /* background-color: #ffe8aa; */
+    background-color: #ffe8aa;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -574,13 +577,11 @@ body {
 .seller .seller-container .child{
     width: 300px;
     height: 400px;
-    /* border: 2px solid black; */
     margin: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* box-shadow: 0 0 10px black; */
     transition: all 0.2s ease-in-out;
 }
 
@@ -610,21 +611,25 @@ body {
 
 .child button{
     padding: 10px 20px;
-    /* background-color: #ffd35b; */
-    background-color: #ff3c78;
+    background-color: black;
+    /* background-color: #ff3c78; */
     color: white;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     transition: all 0.2s ease-in-out;
 }
 
 .child button:hover{
     background: transparent;
-    /* color: #ffd35b; */
-    /* border: 2px solid #ffd35b; */
-    color: #ff3c78;
-    border: 2px solid #ff3c78;
+    /* color: #ff3c78;
+    border: 2px solid #ff3c78; */
+    color: black;
+    border: 2px solid black;
+}
+
+.child h3{
+    display: none;
 }
 
 @media (max-width: 768px){
@@ -641,13 +646,17 @@ body {
     .seller .seller-container .child{
         width: 155px;
         height: 200px;
-        box-shadow: 0 0 10px black; 
-        background-color: white;
+        /* box-shadow: 0 0 10px black; 
+        background-color: white; */
+    }
+
+    .seller .seller-container .child:hover{
+        box-shadow: none;
     }
 
     .seller .seller-container .child img{
         width: 155px;
-        height: 130px;
+        height: 200px;
         box-shadow: none;
     }
 
@@ -656,15 +665,20 @@ body {
     }
 
     .child p{
-        font-size: 14px;
+        /* font-size: 14px;
         margin-top: 0;
         text-align: center;
-        line-height: 15px;
+        line-height: 15px; */
+        display: none;
     }
 
 
     .child button{
         display: none;
+    }
+
+    .child h3{
+        display: block;
     }
 }
 
@@ -679,7 +693,8 @@ body {
 .news-heading p {
     text-align: center;
     font-size: 18px;
-    color: #ff3c78;
+    color: red;
+    /* color: #ff3c78; */
     letter-spacing: 2px;
     font-weight: 500;
     margin-bottom: 15px;
@@ -765,7 +780,8 @@ body {
     text-decoration: none;
     text-align: center;
     padding: 0 50px;
-    color: #ff3c78;
+    color: red;
+    /* color: #ff3c78; */
     position: relative;
     font-weight: 600;
 }
@@ -773,7 +789,8 @@ body {
 .l-news1 .news1-conte .date-news1 a::after {
     content: "";
     position: absolute;
-    background: #ff3c78;
+    /* background: #ff3c78; */
+    background: red;
     height: 3px;
     width: 100%;
     left: 0;

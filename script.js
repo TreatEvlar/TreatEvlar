@@ -42,6 +42,10 @@ function navClose(){
     navBtn.classList.remove('active')
 }
 
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', navClose);
+});
+
 // Search-box Close
 
 function searchBox(){
@@ -52,24 +56,25 @@ function searchBox(){
 // Seller Cards
 
 const cards = [
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A24', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B29', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C32', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D18', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E04', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A19', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B44', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C57', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D31', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E42', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A10', para:'Premiun type c with Charger'},
-    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E08', para:'Premiun type c with Charger'}
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A24', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B29', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C32', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D18', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E04', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A19', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B44', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C57', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D31', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E42', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A10', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender E08', price:'$15.00', para:'Premiun type c with Charger'}
 ]
 
 document.getElementById('seller-container').innerHTML = cards.map(ing => `
     <div class="child">
          <img src=${ing.img} alt="">
          <h2>${ing.heading}</h2>
+         <h3>${ing.price}</h3>
          <p>${ing.para}</p>
          <button>Shop Now</button>
     </div>
