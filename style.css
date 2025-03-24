@@ -14,6 +14,11 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .top-txt{
     background-color: black;
     color: white;
@@ -253,7 +258,7 @@ body {
 
     .navbar-container ul hr{
         display: block;
-        margin-top: 350px;
+        margin-top: 370px;
     }
 
     .navbar-container ul i span{

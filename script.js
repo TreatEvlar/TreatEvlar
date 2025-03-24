@@ -32,28 +32,16 @@ startCountdown(24 * 60 * 60);
 
 // Phone Navbar
 
-// function navOpen(){
-//     const navBtn = document.querySelector('.navbar-container ul');
-//     navBtn.classList.add('active')
-// }
-
-// function navClose(){
-//     const navBtn = document.querySelector('.navbar-container ul');
-//     navBtn.classList.remove('active')
-// }
-
-// document.querySelectorAll('.nav-link').forEach(link => {
-//     link.addEventListener('click', navClose);
-// });
-
 function navOpen() {
     const navBtn = document.querySelector('.navbar-container ul');
     navBtn.classList.add('active');
+    document.body.classList.add('no-scroll'); // Prevent scrolling
 }
 
 function navClose() {
     const navBtn = document.querySelector('.navbar-container ul');
     navBtn.classList.remove('active');
+    document.body.classList.remove('no-scroll'); // Allow scrolling again
 }
 
 // Close the navbar when clicking on any nav link
@@ -71,6 +59,7 @@ document.addEventListener('click', (event) => {
         navClose();
     }
 });
+
 
 
 // Search-box Close
