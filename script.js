@@ -32,19 +32,46 @@ startCountdown(24 * 60 * 60);
 
 // Phone Navbar
 
-function navOpen(){
+// function navOpen(){
+//     const navBtn = document.querySelector('.navbar-container ul');
+//     navBtn.classList.add('active')
+// }
+
+// function navClose(){
+//     const navBtn = document.querySelector('.navbar-container ul');
+//     navBtn.classList.remove('active')
+// }
+
+// document.querySelectorAll('.nav-link').forEach(link => {
+//     link.addEventListener('click', navClose);
+// });
+
+function navOpen() {
     const navBtn = document.querySelector('.navbar-container ul');
-    navBtn.classList.add('active')
+    navBtn.classList.add('active');
 }
 
-function navClose(){
+function navClose() {
     const navBtn = document.querySelector('.navbar-container ul');
-    navBtn.classList.remove('active')
+    navBtn.classList.remove('active');
 }
 
+// Close the navbar when clicking on any nav link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', navClose);
 });
+
+// Close the navbar when clicking outside of the nav
+document.addEventListener('click', (event) => {
+    const navBtn = document.querySelector('.navbar-container ul');
+    const navContainer = document.querySelector('.navbar-container');
+
+    // Check if the click is outside the navContainer
+    if (!navContainer.contains(event.target)) {
+        navClose();
+    }
+});
+
 
 // Search-box Close
 
@@ -77,5 +104,47 @@ document.getElementById('seller-container').innerHTML = cards.map(ing => `
          <h3>${ing.price}</h3>
          <p>${ing.para}</p>
          <button>Shop Now</button>
+    </div>
+    `).join('')
+
+
+
+// Review section
+
+const Review_cards = [
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender A24', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender B29', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender C32', price:'$15.00', para:'Premiun type c with Charger'},
+    {img:'./images/6620082ddab1d0258069c8e3-blender-portable-blender-with-usb.jpg', heading:'Blender D18', price:'$15.00', para:'Premiun type c with Charger'}
+]
+
+document.getElementById('review_box').innerHTML = Review_cards.map(ing => `
+
+    <div class="review_card">
+
+        <div class="review_profile">
+            <img src=${ing.img}>
+        </div>
+
+        <div class="review_text">
+            <h2 class="name">${ing.heading}</h2>
+
+            <div class="review_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid ullam voluptatem nemo obcaecati dicta id labore natus qui tempore excepturi, eaque omnis odit, perferendis ad saepe deserunt! Voluptatibus, maiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+
+            <p2>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid ullam voluptatem nemo obcaecati dicta id labore natus qui tempore excepturi
+            </p2>
+
+        </div>
     </div>
     `).join('')

@@ -209,7 +209,7 @@ body {
 
     .navbar-container ul{
         width: 80%;    
-        height: 91vh;
+        height: 93vh;
         position: absolute;
         top: 0px;
         right: 890px;
@@ -285,6 +285,10 @@ body {
         z-index: 100;
         font-size: 20px;
         cursor: pointer;
+    }
+
+    .navbar-container ul li a:hover::after{
+        display: none;
     }
 
 }
@@ -558,7 +562,6 @@ body {
 .seller{
     width: 100%;
     height: auto;
-    background-color: #ffe8aa;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -612,7 +615,6 @@ body {
 .child button{
     padding: 10px 20px;
     background-color: black;
-    /* background-color: #ff3c78; */
     color: white;
     font-size: 16px;
     border-radius: 10px;
@@ -622,8 +624,6 @@ body {
 
 .child button:hover{
     background: transparent;
-    /* color: #ff3c78;
-    border: 2px solid #ff3c78; */
     color: black;
     border: 2px solid black;
 }
@@ -639,6 +639,11 @@ body {
         top: 100px;
     }
 
+    .seller h1{
+        margin-bottom: -50px;
+        font-weight: 500;
+    }
+
     .seller .seller-container{
         margin-top: 50px;
     }
@@ -646,8 +651,6 @@ body {
     .seller .seller-container .child{
         width: 155px;
         height: 200px;
-        /* box-shadow: 0 0 10px black; 
-        background-color: white; */
     }
 
     .seller .seller-container .child:hover{
@@ -662,13 +665,10 @@ body {
 
     .child h2{
         font-size: 20px;
+        font-weight: 600;
     }
 
     .child p{
-        /* font-size: 14px;
-        margin-top: 0;
-        text-align: center;
-        line-height: 15px; */
         display: none;
     }
 
@@ -679,6 +679,8 @@ body {
 
     .child h3{
         display: block;
+        font-family: sans-serif;
+        font-weight: 600;
     }
 }
 
@@ -687,18 +689,17 @@ body {
 /*New arrivals start*/
 
 #news {
-    margin-bottom: 250px;
+    margin-bottom: 200px;
 }
 
 .news-heading p {
     text-align: center;
     font-size: 18px;
     color: red;
-    /* color: #ff3c78; */
     letter-spacing: 2px;
     font-weight: 500;
     margin-bottom: 15px;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .news-heading h2 {
@@ -781,7 +782,6 @@ body {
     text-align: center;
     padding: 0 50px;
     color: red;
-    /* color: #ff3c78; */
     position: relative;
     font-weight: 600;
 }
@@ -789,7 +789,6 @@ body {
 .l-news1 .news1-conte .date-news1 a::after {
     content: "";
     position: absolute;
-    /* background: #ff3c78; */
     background: red;
     height: 3px;
     width: 100%;
@@ -890,7 +889,7 @@ body {
 
 @media (max-width: 500px){
     .news-heading{
-        margin-top: 100px;
+        margin-top: 150px;
     }
     .l-news {
         display: flex;
@@ -917,15 +916,163 @@ body {
 
 /* New arrival end */
 
+/* Review start */
+
+.review{
+    width: 100%;
+    height: 100vh;
+}
+
+.review h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.review h1 span{
+    margin-left: 15px;
+    color: #ff3c78;
+    font-family: mv boli;
+}
+
+.review .review_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+
+.review .review_box .review_card{
+    width: 350px;
+    height: 485px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.review .review_box .review_card .review_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_profile{
+    transform: translateY(-60px);
+}
+
+.review .review_box .review_card .review_profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+}
+
+.review .review_box .review_card .review_text{
+    text-align: center;
+}
+
+.review .review_box .review_card .review_text .name{
+    color: #000;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .name{
+    transform: translateY(-50px);
+}
+
+.review .review_box .review_card .review_text .review_icon{
+    color: #fac031;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_icon{
+    transform: translateY(-30px);
+}
+
+/* .review .review_box .review_card .review_text .review_social i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+} 
+
+.review .review_box .review_card:hover .review_text .review_social i{
+    opacity: 1;
+    transform: translateY(-8px)
+} */
+
+.review .review_box .review_card .review_text p{
+    text-align: center;
+    line-height: 22px;
+    transition: 0.3s
+}
+
+.review .review_box .review_card .review_text p2{
+    display: none;
+}
+
+@media (max-width: 768px){
+
+    .review{
+        width: 100%;
+        height: 75vh;
+    }
+
+    .review h1{
+        font-size: 35px;
+    }
+
+    .review .review_box{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .review .review_box .review_card{
+        width: 164px;
+        height: 250px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        padding: 8px 20px;
+        margin: 0 8px;
+    }
+
+    .review .review_box .review_card .review_profile img{
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        border: 5px solid #cccccc;
+    }
+
+    .review .review_box .review_card .review_text{
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .review .review_box .review_card .review_text p{
+        display: none;
+    }
+
+    .review .review_box .review_card .review_text p2{
+        display: block;
+    }
+
+}
+
+/* Review end */
+
 /* contact start */
 
 .contact {
     margin-top: 45px;
-}
-
-iframe {
-    height: 72vh;
-    width: 100%;
 }
 
 .form {
